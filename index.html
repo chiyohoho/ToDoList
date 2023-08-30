@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_container">
+            <div class="h_sale">
+                <img src="https://fptshop.com.vn/Content/v4/images/clipse.svg" alt="">
+                <p>[Sale chớp nhoáng] Galaxy Tab A7 Lite giá SỐC còn 2.99 triệu</p>
+                <button>Săn ngay</button>
+            </div>
+
+            <div class="h_nav_option">
+                <div class="hno_container">
+                    <div class="hno_img">
+                        <img src="https://fptcloud.com/wp-content/uploads/2022/05/FPT-Shop-1.png" alt="">
+                    </div>
+
+                    <div class="mb-3 hno_search">
+                        <div class="relative mb-4 flex flex-wrap items-stretch">
+                            <input type="search"
+                                class="input_search relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" aria-label="Search"
+                                aria-describedby="button-addon1" />
+
+                            <!--Search button-->
+                            <button
+                                class="relative z-[2] flex items-center rounded-r bg-gray-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-700 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg"
+                                type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="h-5 w-5">
+                                    <path fill-rule="evenodd"
+                                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <ul class="hno_list" style="list-style: none;">
+                        <li class="hno_li hno_li_hover">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <p>Thông tin hay</p>
+                            <ul class="hover_nav">
+                                <li>Tin mới</li>
+                                <li>Khuyến mãi</li>
+                                <li>Điện máy - Gia dụng</li>
+                                <li>Thủ thuật</li>
+                                <li>For Gamers</li>
+                                <li>Video hot</li>
+                                <li>Đánh giá - Tư vấn</li>
+                                <li>App & Game</li>
+                                <li>Sự kiện</li>
+                            </ul>
+                        </li>
+                        <li class="hno_li">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <p>Thanh toán & tiện ích</p>
+                        </li>
+                        <li class="hno_li">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <p>Tài khoản của tôi</p>
+                        </li>
+                        <li class="hno_li">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Giỏ hàng</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h_nav_bar">
+                <div class="hnb_container">
+                    <ul class="hnb_list" style="list-style: none;">
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p>Điện thoại</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-laptop"></i>
+                            <p>Laptop</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <p>Máy tính bảng</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-brands fa-apple"></i>
+                            <p>Apple</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-computer"></i>
+                            <p>PC - Linh kiện</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-headphones-simple"></i>
+                            <p>Phụ kiện</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                            <p>Máy cũ giá rẻ</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-house-medical"></i>
+                            <p>Hàng gia dụng</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-sim-card"></i>
+                            <p>Sim & thẻ</p>
+                        </li>
+                        <li class="hnb_li">
+                            <i class="fa-solid fa-certificate"></i>
+                            <p>Khuyến mãi</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main_container">
+            <div class="main_content">
+                <div class="deal_top">
+                    <img src="https://images.fpt.shop/unsafe/fit-in/fptshop.com.vn/Uploads/Originals/2023/8/28/638288411404630086_Tagline.png"
+                        alt="">
+                </div>
+
+                <div class="deal_middle" style="margin-top: 20px;">
+                    <div id="default-carousel" class="relative w-3/4 middle_left" data-carousel="slide">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-56 overflow-hidden md:h-80 carousel_img">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/30/638289917357965560_F-H1_800x300.png"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/30/638289848736910402_F-H1_800x300.png"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/14/638276346832833378_F-H1_800x300.png"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/28/638288386558733605_F-H1_800x300.png"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/22/638282967720993063_F-H1_800x300.png"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-10 left-1/2 middle_button">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                                data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                                data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                                data-carousel-slide-to="2"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                                data-carousel-slide-to="3"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                                data-carousel-slide-to="4"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="middle_right">
+                        <div class="mr_top">
+                            <img src="https://images.fpt.shop/unsafe/fit-in/385x100/fptshop.com.vn/Uploads/Originals/2023/8/21/638282131957313690_H2_385x100.png"
+                                alt="">
+                            <img src="https://images.fpt.shop/unsafe/fit-in/385x100/fptshop.com.vn/Uploads/Originals/2023/8/1/638264776251597698_H2_385x100iP13%201.png"
+                                alt="">
+                        </div>
+                        <div class="mr_bottom">
+                            <h5>Tin khuyến mãi</h5>
+                            <div class="mr_deal" style="margin-bottom: 5px;">
+                                <img src="https://images.fpt.shop/unsafe/fit-in/70x40/fptshop.com.vn/Uploads/images/2015/PhuongMT5/Tin%20KM%20main(10).png"
+                                    alt="">
+                                <p>Samsung giảm thêm đến 5% cho HSSV</p>
+                            </div>
+                            <div class="mr_deal">
+                                <img src="https://images.fpt.shop/unsafe/fit-in/70x40/fptshop.com.vn/Uploads/images/2015/PhuongMT5/Tin%20KM%20main(17).png"
+                                    alt="">
+                                <p>FPT Shop hỗ trợ thanh toán Apple Pay</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main_product grid grid-cols-6">
+                <div class="product_card">
+                    <div class="card_info">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
+                            alt="" style="width: 60px; height: 60px;">
+                        <p class="card_des">Điện Thoại</p>
+                    </div>
+                </div>
+                <div class="product_card">
+                    <div class="card_info">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
+                            alt="" style="width: 60px; height: 60px;">
+                        <p class="card_des">Điện Thoại</p>
+                    </div>
+                </div>
+                <div class="product_card">
+                    <div class="card_info">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
+                            alt="" style="width: 60px; height: 60px;">
+                        <p class="card_des">Điện Thoại</p>
+                    </div>
+                </div>
+                <div class="product_card">
+                    <div class="card_info">
+                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
+                            alt="" style="width: 60px; height: 60px;">
+                        <p class="card_des">Điện Thoại</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ---------SCRIPT----------- -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="js.js"></script>
+
+</body>
+
+</html>

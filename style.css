@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header .header_container {
+    margin: 0px auto;
+}
+
+header .header_container .h_sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .header_container .h_sale img {
+    scale: 0.6;
+}
+
+header .header_container .h_sale p {
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+header .header_container .h_sale button {
+    background: #2183f6;
+    padding: 2px 7px;
+    border-radius: 3px;
+
+    color: white;
+    font-size: 14px;
+}
+
+header .header_container .h_nav_option {
+    background: #cd1818;
+}
+
+header .header_container .h_nav_option .hno_container {
+    margin: 0 auto;
+
+    height: 60px;
+    width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header_container .h_nav_option .hno_img {
+    width: 200px;
+    margin-right: 50px;
+}
+
+header .header_container .h_nav_option .hno_search {
+    width: 450px;
+    padding-top: 25px;
+    margin-right: 50px;
+}
+
+header .header_container .h_nav_option .hno_search .input_search {
+    background: white;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+header .header_container .h_nav_option .hno_list {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    height: 60px;
+    padding-top: 10px;
+
+    cursor: pointer;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li i {
+    font-size: 20px;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li p {
+    font-size: 14px;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li_hover {
+    position: relative;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li_hover:hover .hover_nav {
+    opacity: 1;
+    top: 60px;
+    transition: all 0.3s linear;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li_hover .hover_nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px;
+    width: 170px;
+    background: white;
+    border-radius: 3px;
+    color: black;
+
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s linear;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li_hover .hover_nav li {
+    line-height: 25px;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+header .header_container .h_nav_option .hno_list .hno_li_hover .hover_nav li:hover {
+    background: rgb(218, 214, 214);
+    opacity: 0.8;
+    transition: all 0.3s linear;
+}
+
+header .header_container .h_nav_bar {
+    background: #252525;
+}
+
+header .header_container .h_nav_bar .hnb_container {
+    width: 1250px;
+    margin: 0 auto;
+    height: 40px;
+}
+
+header .header_container .h_nav_bar .hnb_container .hnb_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    height: 40px;
+
+    color: white;
+
+}
+
+header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 5px;
+
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ----------------Main ---------------*/
+
+.main {
+    height: fit-content;
+}
+
+.main .main_container {
+    background: url(https://images.fpt.shop/unsafe/fit-in/fptshop.com.vn/Uploads/Originals/2023/8/28/638288411406628191_desk-header-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main .main_container .main_content {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.main .main_container .main_content .deal_top img {
+    background-repeat: no-repeat;
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.main .main_container .main_content .deal_middle {
+    display: flex;
+    gap: 5px;
+    padding: 5px 5px;
+    background: white;
+    border-radius: 10px;
+}
+
+.main .main_container .main_content .deal_middle .middle_left .carousel_img {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.main .main_container .main_content .deal_middle .middle_right {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1px;
+}
+
+.main .main_container .main_content .deal_middle .middle_right .mr_bottom h5 {
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.main .main_container .main_content .deal_middle .middle_right .mr_bottom .mr_deal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main .main_container .main_content .deal_middle .middle_right .mr_bottom .mr_deal img {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+
+/* -------------Product------------- */
+
+.main .main_container .main_product {
+    width: 1250px;
+    height: 500px;
+    margin: 30px auto;
+
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+}
+
+.main .main_container .main_product .product_card {
+    position: relative;
+    border: 1px solid #dbcece;
+    height: 200px;
+    transition: all 0.1s linear;
+}
+
+.main .main_container .main_product .product_card:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all 0.1s linear;
+}
+
+.main .main_container .main_product .product_card::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 60%;
+    background: #f4f4f4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+}
+
+.main .main_container .main_product .product_card .card_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

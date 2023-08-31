@@ -412,7 +412,6 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
     overflow: hidden;
 
     background: white;
-    border: 1px solid black;
 }
 
 
@@ -508,7 +507,7 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
     transform: scale(1.05);
     transition: all 0.22s linear;
 
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* --------Input Product Sale--------- */

@@ -98,6 +98,7 @@ header .header_container .h_nav_option .hno_list .hno_li_hover:hover .hover_nav 
     opacity: 1;
     top: 60px;
     transition: all 0.3s linear;
+    visibility: visible;
 }
 
 header .header_container .h_nav_option .hno_list .hno_li_hover .hover_nav {
@@ -111,8 +112,9 @@ header .header_container .h_nav_option .hno_list .hno_li_hover .hover_nav {
     color: black;
 
     opacity: 0;
-    z-index: 1;
+    z-index: 99;
     transition: all 0.3s linear;
+    visibility: hidden;
 }
 
 header .header_container .h_nav_option .hno_list .hno_li_hover .hover_nav li {
@@ -160,17 +162,12 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
 }
 
 /* ----------------Main ---------------*/
-
-.main {
-    height: fit-content;
-}
-
 .main .main_container {
-    background: url(https://images.fpt.shop/unsafe/fit-in/fptshop.com.vn/Uploads/Originals/2023/8/28/638288411406628191_desk-header-bg.png);
-    background-position: center;
+    position: relative;
+    background: url(IMG/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+
 }
 
 .main .main_container .main_content {
@@ -222,13 +219,22 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
     border-radius: 7px;
 }
 
+
 /* -------------Product------------- */
 
+.main .main_container {
+    position: relative;
+}
+
 .main .main_container .main_product {
+    position: relative;
     width: 1250px;
-    height: 500px;
     margin: 30px auto;
 
+    display: grid;
+    gap: 0;
+    border-left: 1px solid #dbcece;
+    border-bottom: 1px solid #dbcece;
     border-radius: 10px;
     background: white;
     overflow: hidden;
@@ -236,13 +242,16 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
 
 .main .main_container .main_product .product_card {
     position: relative;
-    border: 1px solid #dbcece;
+    border-right: 1px solid #dbcece;
+    border-top: 1px solid #dbcece;
     height: 200px;
     transition: all 0.1s linear;
+
+    cursor: pointer;
 }
 
 .main .main_container .main_product .product_card:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all 0.1s linear;
 }
 
@@ -264,8 +273,275 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+.main .main_container .main_product .product_card p {
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    width: 150px;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.main .main_container .main_product .product_input {
+    position: absolute;
+    right: 0;
+}
+
+
+/* ---------Input Product-------- */
+.main .main_container .add_product {
+    position: absolute;
+    right: 150px;
+    top: 558px;
+}
+
+.main .main_container .add_product .dropdown_option {
+    padding: 10px;
+    height: 200px;
+}
+
+.main .main_container .add_product .input_product_content .add_input {
+    width: 100%;
+}
+
+.main .main_container .add_product .dropdown_option .add_btn {
+    padding: 5px;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    background: wheat;
+
+    cursor: pointer;
+}
+
+/* -----------Main banner----------- */
+.main .main_container .main_banner .main_banner_img {
+    width: 1250px;
+    margin: 0 auto;
+
+    position: relative;
+    height: 200px;
+}
+
+.main .main_container .main_banner .main_banner_img .main_banner_img1 {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .main_container .main_banner .main_banner_img .main_banner_img2 {
+    position: absolute;
+    top: 62px;
+}
+
+.main .main_container .main_banner .main_banner_countdown {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    background: #6a737a;
+    border-right: 1px solid white;
+    border-top: 1px solid rgb(170, 163, 163);
+    border-bottom: 1px solid rgb(170, 163, 163);
+    justify-content: center;
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_content .countdown_end {
+    padding: 1px 5px;
+    background: #5a6268;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_content_coming {
+    background: #cb1c22;
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_content_coming .countdown_begin {
+    padding: 1px 5px;
+    background: #efb74d;
+    font-size: 14px;
+    border-radius: 5px;
+    color: red;
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_coming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+
+    border-top: 1px solid rgb(170, 163, 163);
+    border-right: 1px solid white;
+    border-bottom: 1px solid rgb(170, 163, 163);
+}
+
+.main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_coming .counter_bar {
+    width: 170px;
+    height: 35px;
+}
+
+
+/* ------------Banner Deal Product------------- */
+
+.main .main_container .main_banner .main_banner_deal {
+    width: 1250px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    background: white;
+    border: 1px solid black;
+}
+
+
+.main .main_container .main_banner .main_banner_deal .mbd_card {
+    width: 100%;
+    padding: 17px;
+    text-align: center;
+
+    transition: all 0.22s linear;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top {
+    border-radius: 15px;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_img {
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_img img {
+    scale: 0.7;
+    padding-left: 38px;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_text h3 {
+    color: #f6c743;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_text .discount_top {
+    padding: 2px 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: red;
+    background: #f6c743;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_text h5 {
+    text-decoration: line-through;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_text p {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    background: #ef8573;
+    color: #fffefd;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_top .card_top_text p::before {
+    position: absolute;
+    content: url(https://fptshop.com.vn/Content/v5d/sale-special/images/progress-icon.png);
+    left: 0;
+    top: -10px;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_bottom {
+    margin-top: 15px;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card .card_bottom span {
+    display: inline-block;
+    width: 100%;
+    background: #f05252;
+    border-radius: 5px;
+    line-height: 40px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.main .main_container .main_banner .main_banner_deal .mbd_card:hover {
+    transform: scale(1.05);
+    transition: all 0.22s linear;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* --------Input Product Sale--------- */
+
+.main .main_container .add_productsale {
+    position: absolute;
+    right: 100px;
+    top: 1230px;
+}
+
+.main .main_container .add_productsale .dropdown_option_ps {
+    position: relative;
+    padding: 10px;
+    width: 250px;
+}
+
+.main .main_container .add_productsale .input_productsale_content .add_input_ps {
+    width: 100%;
+}
+
+.main .main_container .add_productsale .select_ps {
+    width: 100%;
+    border: 1px solid skyblue;
+}
+
+.main .main_container .add_productsale .dropdown_option_ps .add_btn_productsale {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 5px;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    background: wheat;
+
+    cursor: pointer;
 }

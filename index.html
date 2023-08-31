@@ -46,6 +46,8 @@
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -176,7 +178,7 @@
                 <div class="deal_middle" style="margin-top: 20px;">
                     <div id="default-carousel" class="relative w-3/4 middle_left" data-carousel="slide">
                         <!-- Carousel wrapper -->
-                        <div class="relative h-56 overflow-hidden md:h-80 carousel_img">
+                        <div class="relative h-[100%] overflow-hidden md:h-80 carousel_img">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/30/638289917357965560_F-H1_800x300.png"
@@ -275,34 +277,176 @@
                 </div>
             </div>
 
-            <div class="main_product grid grid-cols-6">
-                <div class="product_card">
+            <div class="main_product grid-cols-6">
+                <!-- <div class="product_card">
                     <div class="card_info">
                         <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
                             alt="" style="width: 60px; height: 60px;">
                         <p class="card_des">Điện Thoại</p>
                     </div>
+                </div> -->
+            </div>
+
+            <div class="add_product">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                    class="text-blue-400 bg-white hover:bg-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    type="button">Bấm dô đê<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 w-[200px] dropdown_option">
+                    <div class="input_nameproduct input_product_content">
+                        <label for="add_name">Tên sản phẩm</label>
+                        <input type="text" class="add_name add_input">
+                    </div>
+
+                    <div class="input_imgproduct input_product_content" style="margin-bottom: 20px;">
+                        <label for="add_img">Hình ảnh sản phẩm</label>
+                        <input type="text" class="add_img add_input">
+                    </div>
+
+                    <span class="add_btn">Thêm sản phẩm</span>
                 </div>
-                <div class="product_card">
-                    <div class="card_info">
-                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
-                            alt="" style="width: 60px; height: 60px;">
-                        <p class="card_des">Điện Thoại</p>
-                    </div>
+            </div>
+
+            <div class="main_banner">
+                <div class="main_banner_img">
+                    <img class="main_banner_img1"
+                        src="https://fptshop.com.vn/Content/v5d/sale-special/images/flashsale-title.png" alt="">
+                    <img class="main_banner_img2"
+                        src="https://fptshop.com.vn/Uploads/Originals/2023/8/14/638276035342080093_Gaming.png" alt="">
                 </div>
-                <div class="product_card">
-                    <div class="card_info">
-                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
-                            alt="" style="width: 60px; height: 60px;">
-                        <p class="card_des">Điện Thoại</p>
-                    </div>
+
+                <div class="main_banner_countdown">
+                    <ul class="countdown_list" style="list-style: none;">
+                        <li class="countdown_content cc_list1">
+                            <h4>28/08</h4>
+                            <p class="countdown_end">Đã kết thúc</p>
+                        </li>
+                        <li class="countdown_content cc_list2">
+                            <h4>29/08</h4>
+                            <p class="countdown_end">Đã kết thúc</p>
+                        </li>
+                        <li class="countdown_content cc_list3">
+                            <h4>30/08</h4>
+                            <p class="countdown_end">Đã kết thúc</p>
+                        </li>
+                        <li class="countdown_content countdown_content_coming cc_list4">
+                            <h4>31/08</h4>
+                            <p class="countdown_begin">Sắp diễn ra</p>
+                        </li>
+                        <li class="countdown_coming cc_list5">
+                            <p>Bắt đầu sau</p>
+                            <div class="flex counter_js">
+                                <div class="bg-gray-50 rounded-lg shadow-lg counter_bar">
+                                    <div class="flex flex-col gap-4 items-center justify-between">
+                                        <span id="countdown" class="text-2xl font-semibold text-gray-700"></span>
+                                    </div>
+
+                                    <script>
+                                        // Set the date we're counting down to
+                                        var countDownDate = new Date("Sept 1, 2023 19:00:00").getTime();
+
+                                        // Update the count down every 1 second
+                                        var x = setInterval(function () {
+
+                                            // Get today's date and time
+                                            var now = new Date().getTime();
+
+                                            // Find the distance between now and the count down date
+                                            var distance = countDownDate - now;
+
+                                            // Time calculations for days, hours, minutes and seconds
+                                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                            // Output the result in an element with id="countdown" 
+                                            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds +
+                                                "s ";
+
+                                            // If the count down is over, write some text 
+                                            if (distance < 0) {
+                                                clearInterval(x);
+                                                document.getElementById("countdown").innerHTML = "EXPIRED";
+                                            }
+                                        }, 1000);
+                                    </script>
+                                </div>
+                            </div>
+                            <p>| Xem chi tiết</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="product_card">
-                    <div class="card_info">
-                        <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
-                            alt="" style="width: 60px; height: 60px;">
-                        <p class="card_des">Điện Thoại</p>
+
+                <div class="main_banner_deal grid grid-cols-4" style="background: white;">
+                    <!-- <div class="mbd_card" style="background: white;">
+                        <div class="card_top bg-red-500">
+                            <div class="card_top_img bg-white"
+                                style="background-image: url(https://fptshop.com.vn/Content/v5d/sale-special/images/product-border2.png) ;">
+                                <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/5/637979643267415257_asus-tuf-gaming-fx706hc-hx579w-i5-11400h-xam-1.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card_top_text" style="padding-bottom: 10px;">
+                                <h4 style="width: 70%; margin: 0 auto;">Asus TUF Gaming FX706HC-HX579W i5
+                                    11400H
+                                </h4>
+                                <h3>16990000 <span class="discount_top">-36%</span></h3>
+                                <h5>26490000</h5>
+                                <p>Đã bán 0/5 suất</p>
+                            </div>
+                        </div>
+
+                        <div class="card_bottom">
+                            <span>MUA GIÁ SỐC</span>
+                            <p style="color: #156df9; font-weight: 500;">Xem sản phẩm</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="add_productsale">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown2"
+                    class="text-blue-400 bg-white hover:bg-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    type="button">Bấm dô đây nè<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdown2"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dropdown_option_ps">
+                    <div class="input_nameproductsale input_productsale_content">
+                        <label for="add_name_ps">Tên sản phẩm</label>
+                        <input type="text" class="add_name_ps add_input_ps">
                     </div>
+
+                    <div class="input_priceproductsale input_productsale_content">
+                        <label for="add_price_ps">Giá sản phẩm</label>
+                        <input type="text" class="add_price_ps add_input_ps">
+                    </div>
+
+                    <div class="input_discountproductsale input_productsale_content">
+                        <label for="add_discount_ps">Giảm giá</label>
+                        <input type="text" class="add_discount_ps add_input_ps">
+                    </div>
+
+                    <div class="input_productsale_content" style="margin-bottom:20px;">
+                        <label for=" add_img_ps">Hình ảnh sản phẩm</label>
+                        <input type="text" class="add_img_ps add_input_ps">
+                    </div>
+
+                    <select class="select_ps input_productsale_content" style="margin-bottom:50px;">
+                        <option value="0" selected="selected">Vui lòng chọn một</option>
+                        <option value="1">Hot</option>
+                        <option value="2">Không Hot</option>
+                    </select>
+
+                    <span class="add_btn_productsale">Thêm sản phẩm</span>
                 </div>
             </div>
         </div>
@@ -313,7 +457,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="js.js"></script>
+    <script src="javascript.js"></script>
 
 </body>
 

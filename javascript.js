@@ -9,9 +9,12 @@ var inputPSDiscount = callElement(".add_discount_ps")
 var inputPSImg = callElement(".add_img_ps")
 var selectPSvalue = callElement(".select_ps")
 var inputProductSaleButton = callElement(".add_btn_productsale")
+
 //-------------DOM Search
 var productSearchInputValue = callElement("#main_product_search")
 var productSearchBtn = callElement("#main_product_btn")
+var mainBannerSearchValue = callElement("#main_banner_search")
+var mainBannerSearchBtn = callElement("#main_banner_btn")
 
 var listProduct = [
     {
@@ -67,28 +70,28 @@ var listProduct = [
 ];
 var listProductSale = [
     {
-        name: "Asus TUF Gaming FX706HC-HX579W i5 11400H",
+        name: "Laptop Asus",
         priceOriginal: 26490000,
         discount: 36,
         borderImg: "1",
         img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/5/637979643267415257_asus-tuf-gaming-fx706hc-hx579w-i5-11400h-xam-1.jpg"
     },
     {
-        name: "Asus Gaming ROG Strix G15 G513RW-HQ152W R9-6900HX",
+        name: "Laptop Acer",
         priceOriginal: 62990000,
         discount: 44,
         borderImg: "2",
         img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/26/637655727924518755_asus-rog-gaming-g513-rgb4-xam-1.jpg"
     },
     {
-        name: "Laptop ASUS Gaming ROG Strix G533ZS-LN036W/i9-12900H",
+        name: "Laptop ROG",
         priceOriginal: 79990000,
         discount: 43,
         borderImg: "2",
         img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/3/638266729055599003_asus-gaming-rog-strix-g533zs-ln036w-i9-12900h-den-5.jpg"
     },
     {
-        name: "Acer Nitro Gaming AN515-45-R86D R7 5800H",
+        name: "Laptop Nitro",
         priceOriginal: 32490000,
         discount: 32,
         borderImg: "2",
@@ -99,6 +102,9 @@ var listProductSale = [
 inputProductButton.addEventListener('click', addProduct);
 productSearchInputValue.addEventListener("keyup", handleSearch)
 productSearchBtn.addEventListener("click", handleSearch)
+
+mainBannerSearchValue.addEventListener("keyup", mainBannerSearch)
+mainBannerSearchBtn.addEventListener("click", mainBannerSearch)
 
 function callElement(id) {
     return document.querySelector(id)
@@ -249,30 +255,25 @@ function addProductSale() {
 inputProductSaleButton.addEventListener("click", addProductSale)
 //-----------Fuction Search-----
 function handleSearch() {
-    var productSearchInput = productSearchInputValue.value;
-    productSearchInput = productSearchInput.replace(/\s/g, '').toLowerCase();
+    var searchInput = productSearchInputValue.value;
+    searchInput = searchInput.replace(/\s/g, '').toLowerCase();
 
     var viTri = listProduct.findIndex((item, index) => {
-        var nameProduct = item.name.replace(/\s/g, '').toLowerCase();
-
-        if (productSearchInput === "iphone10") {
-            productSearchInput = "iphonex";
-        }
-
-        var find = nameProduct === productSearchInput;
+        nameSanPhamUpdate = (item.name).replace(/\s/g, '').toLowerCase();
+        if (searchInput === "iphone10") {
+            searchInput = "iphonex"
+        } else { }
+        var find = nameSanPhamUpdate === searchInput;
         return find;
-    });
-    console.log('Vị trí nè: ', viTri)
-
+    })
 
     if (viTri !== -1) {
         var listProductUpdate = [];
         listProductUpdate.push(listProduct[viTri]);
         listProduct = listProductUpdate;
-
         showProduct();
     } else {
-        var listProduct = [
+        listProduct = [
             {
                 name: "iPhone X",
                 img: "https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
@@ -326,5 +327,68 @@ function handleSearch() {
         ];
         showProduct();
     }
+
 }
+// -----------Fuction Search 2----
+function mainBannerSearch() {
+    var userSearch = mainBannerSearchValue.value;
+    userSearch = userSearch.replace(/\s/g, '').toLowerCase();
+
+    var mainViTri = listProductSale.findIndex((item, index) => {
+        var nameMain = (item.name).replace(/\s/g, '').toLowerCase();
+        var findMain = nameMain === userSearch;
+        return findMain;
+    })
+
+    console.log("tìm main:", mainViTri)
+
+    if (mainViTri !== -1) {
+        var listProductSaleUpdate = [];
+        listProductSaleUpdate.push(listProductSale[mainViTri]);
+        listProductSale = listProductSaleUpdate;
+
+        showProductSale()
+    } else {
+        listProductSale = [
+            {
+                name: "Laptop Asus",
+                priceOriginal: 26490000,
+                discount: 36,
+                borderImg: "1",
+                img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/5/637979643267415257_asus-tuf-gaming-fx706hc-hx579w-i5-11400h-xam-1.jpg"
+            },
+            {
+                name: "Laptop Acer",
+                priceOriginal: 62990000,
+                discount: 44,
+                borderImg: "2",
+                img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/26/637655727924518755_asus-rog-gaming-g513-rgb4-xam-1.jpg"
+            },
+            {
+                name: "Laptop ROG",
+                priceOriginal: 79990000,
+                discount: 43,
+                borderImg: "2",
+                img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/3/638266729055599003_asus-gaming-rog-strix-g533zs-ln036w-i9-12900h-den-5.jpg"
+            },
+            {
+                name: "Laptop Nitro",
+                priceOriginal: 32490000,
+                discount: 32,
+                borderImg: "2",
+                img: "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/8/15/637961789064693741_acer-nitro-gaming-5-an515-45-den-1.jpg"
+            },
+        ];
+        showProductSale()
+    }
+
+}
+// replace(/\s/g, '').toLowerCase();
+
+
+
+
+
+
+
 

@@ -229,13 +229,13 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
 .main .main_container .main_product {
     position: relative;
     width: 1250px;
-    margin: 30px auto;
+    margin: 0px auto;
 
     display: grid;
     gap: 0;
     border-left: 1px solid #dbcece;
     border-bottom: 1px solid #dbcece;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
     background: white;
     overflow: hidden;
 }
@@ -401,6 +401,29 @@ header .header_container .h_nav_bar .hnb_container .hnb_list .hnb_li {
 .main .main_container .main_banner .main_banner_countdown .countdown_list .countdown_coming .counter_bar {
     width: 170px;
     height: 35px;
+}
+
+/* -----------Main banner search------------ */
+
+.main .main_container .main_product_container {
+    margin-top: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.main .main_container .main_product_container .main_product_search {
+    width: 1250px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.main .main_container .main_product_container .main_product_search #main_product_search {
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.main .main_container .main_banner .main_banner_search {
+    width: 1250px;
+    margin: 0 auto;
 }
 
 

@@ -9,55 +9,60 @@ var inputPSDiscount = callElement(".add_discount_ps")
 var inputPSImg = callElement(".add_img_ps")
 var selectPSvalue = callElement(".select_ps")
 var inputProductSaleButton = callElement(".add_btn_productsale")
+//-------------DOM Search
+var productSearchInputValue = callElement("#main_product_search")
+var productSearchBtn = callElement("#main_product_btn")
 
 var listProduct = [
     {
-        name: "Điện Thoại",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
+        name: "iPhone X",
+        img: "https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
     },
     {
-        name: "Laptop",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-laptop.png"
+        name: "iPhone 11",
+        img: "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-200x200.jpg"
     },
     {
-        name: "PC",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-pc.png"
+        name: "iPhone 12",
+        img: "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg"
+    },
+
+    {
+        name: "iPhone 13",
+        img: "https://cdn.viettelstore.vn/Images/Product/ProductImage/452166194.jpeg"
     },
     {
-        name: "Máy Tính Bảng",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/icon-mtb-desk.png"
+        name: "iPhone 14",
+        img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_12.png"
     },
     {
-        name: "Thiết Bị Thông Minh",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-smart.png"
+        name: "iPhone 15",
+        img: "https://laptopdell.com.vn/wp-content/uploads/2023/01/iPhone-15-Plus-1.jpg"
     },
     {
-        name: "Gia Dụng",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-houseware.png"
+        name: "Samsung Z Fold 3",
+        img: "https://cdn.tgdd.vn/Products/Images/42/248284/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
     },
     {
-        name: "Apple",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-apple-desk.png"
+        name: "Samsung Z Fold 4",
+        img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/s/a/samsung_galaxy_z_fold_4-7.jpg"
     },
     {
-        name: "Samsung",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/destop-ic-samsung.png"
+        name: "Samsung Z Fold 5",
+        img: "https://thetekcoffee.com/wp-content/uploads/2023/07/samsung-galaxy-z-fold5-5g.webp"
+    },
+
+    {
+        name: "Samsung Z Flip 3",
+        img: "https://cdn.tgdd.vn/Products/Images/42/248283/samsung-galaxy-z-flip-3-violet-1-600x600.jpg"
     },
     {
-        name: "Đồng hồ thông minh",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-smartwatch.png"
+        name: "Samsung Z Flip 4",
+        img: "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-tim-600x600.jpg"
     },
     {
-        name: "Phụ kiện",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
-    },
-    {
-        name: "Màn hình",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-screen.png"
-    },
-    {
-        name: "Máy cũ",
-        img: "https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2022/iconcate/icon-tcdm.png"
+        name: "Samsung Z Flip 5",
+        img: "https://cdn.tgdd.vn/Products/Images/42/299250/samsung-galaxy-z-flip5-xanh-mint-thumb-600x600.jpg"
     },
 ];
 var listProductSale = [
@@ -92,6 +97,8 @@ var listProductSale = [
 ];
 
 inputProductButton.addEventListener('click', addProduct);
+productSearchInputValue.addEventListener("keyup", handleSearch)
+productSearchBtn.addEventListener("click", handleSearch)
 
 function callElement(id) {
     return document.querySelector(id)
@@ -127,7 +134,7 @@ function addProduct() {
         // Gọi danh sách array để kiểm tra tên các sản phẩm
         listProduct.map((item, index) => {
             //Kiểm tra tên dữ liệu
-            console.log("item:", item.name)
+            // console.log("item:", item.name)
             //So sánh tên các sản phẩm với tên dữ liệu nhập
             //Nếu giá trị nhập === với từng sản phẩm trong danh sách thì sẽ cập nhật biến isCheck
             if (newProductName === item.name) {
@@ -136,7 +143,7 @@ function addProduct() {
         })
 
         if (isCheck) {
-            alert("san pham da ton tai")
+            alert("Sản phẩm này có rồi ba")
         } else {
             var newProduct = {
                 name: newProductName,
@@ -168,7 +175,7 @@ function showProductSale() {
         var finalPrice = (item.priceOriginal - pricePS).toLocaleString('vi', {
             style: 'currency',
             currency: 'VND',
-        });;;
+        });
 
         if (borderImgPS === "1") {
             borderImgPS = "https://fptshop.com.vn/Content/v5d/sale-special/images/product-border2.png";
@@ -203,12 +210,14 @@ function showProductSale() {
 }
 showProductSale();
 
-function addProduct() {
-    var newPSName = inputPSName.value;
+function addProductSale() {
+    var newPSName = inputPSName.value.toLowerCase();
     var newPSPriceO = inputPSPriceO.value;
     var newPSDiscount = Number(inputPSDiscount.value);
     var newPSImg = inputPSImg.value;
     var newPSBorder = selectPSvalue.value;
+    var newPSNameFirstLetter = newPSName[0].toUpperCase() + newPSName.slice(1);
+
 
     if (newPSName && newPSPriceO && newPSDiscount && newPSImg && newPSBorder) {
         var isCheckPS = false
@@ -221,7 +230,7 @@ function addProduct() {
             alert("Sản phẩm này có rồi ba")
         } else {
             var newProductSale = {
-                name: newPSName,
+                name: newPSNameFirstLetter,
                 priceOriginal: Number(newPSPriceO),
                 discount: newPSDiscount,
                 borderImg: newPSBorder,
@@ -237,4 +246,85 @@ function addProduct() {
     }
 }
 
-inputProductSaleButton.addEventListener("click", addProduct)
+inputProductSaleButton.addEventListener("click", addProductSale)
+//-----------Fuction Search-----
+function handleSearch() {
+    var productSearchInput = productSearchInputValue.value;
+    productSearchInput = productSearchInput.replace(/\s/g, '').toLowerCase();
+
+    var viTri = listProduct.findIndex((item, index) => {
+        var nameProduct = item.name.replace(/\s/g, '').toLowerCase();
+
+        if (productSearchInput === "iphone10") {
+            productSearchInput = "iphonex";
+        }
+
+        var find = nameProduct === productSearchInput;
+        return find;
+    });
+    console.log('Vị trí nè: ', viTri)
+
+
+    if (viTri !== -1) {
+        var listProductUpdate = [];
+        listProductUpdate.push(listProduct[viTri]);
+        listProduct = listProductUpdate;
+
+        showProduct();
+    } else {
+        var listProduct = [
+            {
+                name: "iPhone X",
+                img: "https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
+            },
+            {
+                name: "iPhone 11",
+                img: "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-200x200.jpg"
+            },
+            {
+                name: "iPhone 12",
+                img: "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg"
+            },
+
+            {
+                name: "iPhone 13",
+                img: "https://cdn.viettelstore.vn/Images/Product/ProductImage/452166194.jpeg"
+            },
+            {
+                name: "iPhone 14",
+                img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_12.png"
+            },
+            {
+                name: "iPhone 15",
+                img: "https://laptopdell.com.vn/wp-content/uploads/2023/01/iPhone-15-Plus-1.jpg"
+            },
+            {
+                name: "Samsung Z Fold 3",
+                img: "https://cdn.tgdd.vn/Products/Images/42/248284/samsung-galaxy-z-fold-3-green-1-600x600.jpg"
+            },
+            {
+                name: "Samsung Z Fold 4",
+                img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/s/a/samsung_galaxy_z_fold_4-7.jpg"
+            },
+            {
+                name: "Samsung Z Fold 5",
+                img: "https://thetekcoffee.com/wp-content/uploads/2023/07/samsung-galaxy-z-fold5-5g.webp"
+            },
+
+            {
+                name: "Samsung Z Flip 3",
+                img: "https://cdn.tgdd.vn/Products/Images/42/248283/samsung-galaxy-z-flip-3-violet-1-600x600.jpg"
+            },
+            {
+                name: "Samsung Z Flip 4",
+                img: "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-tim-600x600.jpg"
+            },
+            {
+                name: "Samsung Z Flip 5",
+                img: "https://cdn.tgdd.vn/Products/Images/42/299250/samsung-galaxy-z-flip5-xanh-mint-thumb-600x600.jpg"
+            },
+        ];
+        showProduct();
+    }
+}
+

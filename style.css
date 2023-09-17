@@ -83,21 +83,21 @@
 }
 
 #todolist .tdl_result {
-    position: relative;
+
     padding: 15px 20px;
 }
 
-#todolist .tdl_result .list_need::before {
+#todolist .tdl_result .list_need {
+    position: relative;
+}
+
+#todolist .tdl_result .list_need .show_thongbao {
     position: absolute;
-    content: "Bạn chưa có dự định nào cả";
-    top: 10%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-
-    display: none;
-
 }
 
 #todolist .tdl_result .todo li {
@@ -108,6 +108,8 @@
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    margin-bottom: 5px;
 }
 
 #todolist .tdl_result .todo li .buttons #remove {
@@ -148,15 +150,19 @@
 }
 
 #todolist .tdl_result .list_completed::before {
-    content: "Bạn đã hoàn thành tất cả";
-    width: 150px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+#todolist .tdl_result .list_completed .show_thongbao {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-
     width: 100%;
     text-align: center;
-
-    display: none;
 }

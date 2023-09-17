@@ -5,507 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style type="text/tailwindcss">
-        @layer utilities {
-          .content-auto {
-            content-visibility: auto;
-          }
-        }
-      </style>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
-    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                fontFamily: {
-                    sans: ["Roboto", "sans-serif"],
-                    body: ["Roboto", "sans-serif"],
-                    mono: ["ui-monospace", "monospace"],
-                },
-            },
-            corePlugins: {
-                preflight: false,
-            },
-        };
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header>
-        <div class="header_container">
-            <div class="h_sale">
-                <img src="https://fptshop.com.vn/Content/v4/images/clipse.svg" alt="">
-                <p>[Sale chớp nhoáng] Galaxy Tab A7 Lite giá SỐC còn 2.99 triệu</p>
-                <button>Săn ngay</button>
-            </div>
-
-            <div class="h_nav_option">
-                <div class="hno_container">
-                    <div class="hno_img">
-                        <img src="https://fptcloud.com/wp-content/uploads/2022/05/FPT-Shop-1.png" alt="">
-                    </div>
-
-                    <div class="mb-3 hno_search">
-                        <div class="relative mb-4 flex flex-wrap items-stretch">
-                            <input type="search"
-                                class="input_search relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-                                placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" aria-label="Search"
-                                aria-describedby="button-addon1" />
-
-                            <!--Search button-->
-                            <button
-                                class="relative z-[2] flex items-center rounded-r bg-gray-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-700 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg"
-                                type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="h-5 w-5">
-                                    <path fill-rule="evenodd"
-                                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <ul class="hno_list" style="list-style: none;">
-                        <li class="hno_li hno_li_hover">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <p>Thông tin hay</p>
-                            <ul class="hover_nav">
-                                <li>Tin mới</li>
-                                <li>Khuyến mãi</li>
-                                <li>Điện máy - Gia dụng</li>
-                                <li>Thủ thuật</li>
-                                <li>For Gamers</li>
-                                <li>Video hot</li>
-                                <li>Đánh giá - Tư vấn</li>
-                                <li>App & Game</li>
-                                <li>Sự kiện</li>
-                            </ul>
-                        </li>
-                        <li class="hno_li">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <p>Thanh toán & tiện ích</p>
-                        </li>
-                        <li class="hno_li">
-                            <i class="fa-solid fa-circle-user"></i>
-                            <p>Tài khoản của tôi</p>
-                        </li>
-                        <li class="hno_li">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <p>Giỏ hàng</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="h_nav_bar">
-                <div class="hnb_container">
-                    <ul class="hnb_list" style="list-style: none;">
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <p>Điện thoại</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-laptop"></i>
-                            <p>Laptop</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-tablet-screen-button"></i>
-                            <p>Máy tính bảng</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-brands fa-apple"></i>
-                            <p>Apple</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-computer"></i>
-                            <p>PC - Linh kiện</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-headphones-simple"></i>
-                            <p>Phụ kiện</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-arrow-rotate-right"></i>
-                            <p>Máy cũ giá rẻ</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-house-medical"></i>
-                            <p>Hàng gia dụng</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-sim-card"></i>
-                            <p>Sim & thẻ</p>
-                        </li>
-                        <li class="hnb_li">
-                            <i class="fa-solid fa-certificate"></i>
-                            <p>Khuyến mãi</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <section id="todolist">
+        <div class="tdl_img">
+            <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2017/06/To_Do_List.jpg" style="width: 100%"
+                alt="">
         </div>
-    </header>
-
-    <section class="main">
-        <div class="main_container">
-            <div class="main_content">
-                <div class="deal_top">
-                    <img src="https://images.fpt.shop/unsafe/fit-in/fptshop.com.vn/Uploads/Originals/2023/8/28/638288411404630086_Tagline.png"
-                        alt="">
-                </div>
-
-                <div class="deal_middle" style="margin-top: 20px;">
-                    <div id="default-carousel" class="relative w-3/4 middle_left" data-carousel="slide">
-                        <!-- Carousel wrapper -->
-                        <div class="relative h-[100%] overflow-hidden md:h-80 carousel_img">
-                            <!-- Item 1 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/30/638289917357965560_F-H1_800x300.png"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="...">
-                            </div>
-                            <!-- Item 2 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/30/638289848736910402_F-H1_800x300.png"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="...">
-                            </div>
-                            <!-- Item 3 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/14/638276346832833378_F-H1_800x300.png"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="...">
-                            </div>
-                            <!-- Item 4 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/28/638288386558733605_F-H1_800x300.png"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="...">
-                            </div>
-                            <!-- Item 5 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="https://images.fpt.shop/unsafe/fit-in/800x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/22/638282967720993063_F-H1_800x300.png"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="...">
-                            </div>
-                        </div>
-                        <!-- Slider indicators -->
-                        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-10 left-1/2 middle_button">
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-                                data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                                data-carousel-slide-to="1"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                                data-carousel-slide-to="2"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-                                data-carousel-slide-to="3"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-                                data-carousel-slide-to="4"></button>
-                        </div>
-                        <!-- Slider controls -->
-                        <button type="button"
-                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                            data-carousel-prev>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
-                                </svg>
-                                <span class="sr-only">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button"
-                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                            data-carousel-next>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
-                                </svg>
-                                <span class="sr-only">Next</span>
-                            </span>
-                        </button>
-                    </div>
-
-                    <div class="middle_right">
-                        <div class="mr_top">
-                            <img src="https://images.fpt.shop/unsafe/fit-in/385x100/fptshop.com.vn/Uploads/Originals/2023/8/21/638282131957313690_H2_385x100.png"
-                                alt="">
-                            <img src="https://images.fpt.shop/unsafe/fit-in/385x100/fptshop.com.vn/Uploads/Originals/2023/8/1/638264776251597698_H2_385x100iP13%201.png"
-                                alt="">
-                        </div>
-                        <div class="mr_bottom">
-                            <h5>Tin khuyến mãi</h5>
-                            <div class="mr_deal" style="margin-bottom: 5px;">
-                                <img src="https://images.fpt.shop/unsafe/fit-in/70x40/fptshop.com.vn/Uploads/images/2015/PhuongMT5/Tin%20KM%20main(10).png"
-                                    alt="">
-                                <p>Samsung giảm thêm đến 5% cho HSSV</p>
-                            </div>
-                            <div class="mr_deal">
-                                <img src="https://images.fpt.shop/unsafe/fit-in/70x40/fptshop.com.vn/Uploads/images/2015/PhuongMT5/Tin%20KM%20main(17).png"
-                                    alt="">
-                                <p>FPT Shop hỗ trợ thanh toán Apple Pay</p>
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="tdl_content">
+            <div class="tdl_input">
+                <h1>Những việc cần làm</h1>
+                <p style="margin-bottom: 10px;">Thứ 2 ngày 18 tháng 9 năm 2023</p>
+                <div class="search">
+                    <input type="text" placeholder="Nhập tên nhân vật...">
+                    <span class="button_add" id="btn_add"><i class="fa-solid fa-plus"></i></span>
                 </div>
             </div>
-
-            <div class="main_product_container">
-                <div class="main_product_search">
-                    <form>
-                        <label for="default-search"
-                            class="mb-2 text-sm w-50 font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                                </svg>
-                            </div>
-                            <input type="search" id="main_product_search"
-                                class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Tìm kiếm sản phẩm..." required />
-                            <span id="main_product_btn"
-                                class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Search
-                            </span>
+            <div class="tdl_result">
+                <ul class="list_need todo" id="need_to_do">
+                    <li style="list-style: none;">
+                        <span>Chơi game</span>
+                        <div class="buttons">
+                            <span id="remove"><i class="fa-solid fa-trash-can remove_icon"></i></span>
+                            <span id="completed"><i class="fa-regular fa-circle-check"></i></span>
                         </div>
-                    </form>
-                </div>
-                <div class="main_product grid-cols-6">
-                    <!-- <div class="product_card">
-                        <div class="card_info">
-                            <img src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/fptshop.com.vn/Uploads/images/2015/img-dienthoai-desk.png"
-                                alt="" style="width: 60px; height: 60px;">
-                            <p class="card_des">Điện Thoại</p>
+                    </li>
+                </ul>
+
+                <ul class="list_completed todo" id="completed">
+                    <li style="list-style: none;">
+                        <span style="color: #2cdfc1;">Đi ngủ</span>
+                        <div class="buttons">
+                            <span id="remove"><i class="fa-solid fa-trash-can remove_icon"></i></span>
+                            <span id="completed"><i class="fa-regular fa-circle-check"
+                                    style="color:#2cdfc1;;"></i></span>
                         </div>
-                    </div> -->
-                </div>
-            </div>
-
-            <div class="add_product">
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                    class="text-blue-400 bg-white hover:bg-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    type="button">Bấm dô đê<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 1 4 4 4-4" />
-                    </svg></button>
-                <!-- Dropdown menu -->
-                <div id="dropdown"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 w-[200px] dropdown_option">
-                    <div class="input_nameproduct input_product_content">
-                        <label for="add_name">Tên sản phẩm</label>
-                        <input type="text" class="add_name add_input">
-                    </div>
-
-                    <div class="input_imgproduct input_product_content" style="margin-bottom: 20px;">
-                        <label for="add_img">Hình ảnh sản phẩm</label>
-                        <input type="text" class="add_img add_input">
-                    </div>
-
-                    <span class="add_btn">Thêm sản phẩm</span>
-                </div>
-            </div>
-
-            <div class="main_banner">
-                <div class="main_banner_img" style="margin-top: 50px;">
-                    <img class="main_banner_img1"
-                        src="https://fptshop.com.vn/Content/v5d/sale-special/images/flashsale-title.png" alt="">
-                    <img class="main_banner_img2"
-                        src="https://fptshop.com.vn/Uploads/Originals/2023/8/14/638276035342080093_Gaming.png" alt="">
-                </div>
-
-                <div class="main_banner_countdown">
-                    <ul class="countdown_list" style="list-style: none;">
-                        <li class="countdown_content cc_list1">
-                            <h4>28/08</h4>
-                            <p class="countdown_end">Đã kết thúc</p>
-                        </li>
-                        <li class="countdown_content cc_list2">
-                            <h4>29/08</h4>
-                            <p class="countdown_end">Đã kết thúc</p>
-                        </li>
-                        <li class="countdown_content cc_list3">
-                            <h4>30/08</h4>
-                            <p class="countdown_end">Đã kết thúc</p>
-                        </li>
-                        <li class="countdown_content countdown_content_coming cc_list4">
-                            <h4>31/08</h4>
-                            <p class="countdown_begin">Sắp diễn ra</p>
-                        </li>
-                        <li class="countdown_coming cc_list5">
-                            <p>Bắt đầu sau</p>
-                            <div class="flex counter_js">
-                                <div class="bg-gray-50 rounded-lg shadow-lg counter_bar">
-                                    <div class="flex flex-col gap-4 items-center justify-between">
-                                        <span id="countdown" class="text-2xl font-semibold text-gray-700"></span>
-                                    </div>
-
-                                    <script>
-                                        // Set the date we're counting down to
-                                        var countDownDate = new Date("Sept 13, 2023 00:00:00").getTime();
-
-                                        // Update the count down every 1 second
-                                        var x = setInterval(function () {
-
-                                            // Get today's date and time
-                                            var now = new Date().getTime();
-
-                                            // Find the distance between now and the count down date
-                                            var distance = countDownDate - now;
-
-                                            // Time calculations for days, hours, minutes and seconds
-                                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                                            // Output the result in an element with id="countdown" 
-                                            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds +
-                                                "s ";
-
-                                            // If the count down is over, write some text 
-                                            if (distance < 0) {
-                                                clearInterval(x);
-                                                document.getElementById("countdown").innerHTML = "EXPIRED";
-                                            }
-                                        }, 1000);
-                                    </script>
-                                </div>
-                            </div>
-                            <p>| Xem chi tiết</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="main_banner_search">
-                    <form>
-                        <label for="default-search"
-                            class="mb-2 text-sm w-50 font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                                </svg>
-                            </div>
-                            <input type="search" id="main_banner_search"
-                                class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Search Mockups, Logos..." required />
-                            <span id="main_banner_btn"
-                                class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Search
-                            </span>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="main_banner_deal grid grid-cols-4" style="background: white;">
-                    <!-- <div class="mbd_card" style="background: white;">
-                        <div class="card_top bg-red-500">
-                            <div class="card_top_img bg-white"
-                                style="background-image: url(https://fptshop.com.vn/Content/v5d/sale-special/images/product-border2.png) ;">
-                                <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/5/637979643267415257_asus-tuf-gaming-fx706hc-hx579w-i5-11400h-xam-1.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card_top_text" style="padding-bottom: 10px;">
-                                <h4 style="width: 70%; margin: 0 auto;">Asus TUF Gaming FX706HC-HX579W i5
-                                    11400H
-                                </h4>
-                                <h3>16990000 <span class="discount_top">-36%</span></h3>
-                                <h5>26490000</h5>
-                                <p>Đã bán 0/5 suất</p>
-                            </div>
-                        </div>
-
-                        <div class="card_bottom">
-                            <span>MUA GIÁ SỐC</span>
-                            <p style="color: #156df9; font-weight: 500;">Xem sản phẩm</p>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-
-            <div class="add_productsale">
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown2"
-                    class="text-blue-400 bg-white hover:bg-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    type="button">Bấm dô đây nè<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 1 4 4 4-4" />
-                    </svg></button>
-                <!-- Dropdown menu -->
-                <div id="dropdown2"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dropdown_option_ps">
-                    <div class="input_nameproductsale input_productsale_content">
-                        <label for="add_name_ps">Tên sản phẩm</label>
-                        <input type="text" class="add_name_ps add_input_ps">
-                    </div>
-
-                    <div class="input_priceproductsale input_productsale_content">
-                        <label for="add_price_ps">Giá sản phẩm</label>
-                        <input type="text" class="add_price_ps add_input_ps">
-                    </div>
-
-                    <div class="input_discountproductsale input_productsale_content">
-                        <label for="add_discount_ps">Giảm giá</label>
-                        <input type="text" class="add_discount_ps add_input_ps">
-                    </div>
-
-                    <div class="input_productsale_content" style="margin-bottom:20px;">
-                        <label for=" add_img_ps">Hình ảnh sản phẩm</label>
-                        <input type="text" class="add_img_ps add_input_ps">
-                    </div>
-
-                    <select class="select_ps input_productsale_content" style="margin-bottom:50px;">
-                        <option value="0" selected="selected">Vui lòng chọn một</option>
-                        <option value="1">Hot</option>
-                        <option value="2">Không Hot</option>
-                    </select>
-
-                    <span class="add_btn_productsale">Thêm sản phẩm</span>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
 
-    <!-- ---------SCRIPT----------- -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-    <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="javascript.js"></script>
 
+
+    <!-- javascript -->
+    <script src="https://kit.fontawesome.com/e85274f24a.js" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
 </body>
 
 </html>
